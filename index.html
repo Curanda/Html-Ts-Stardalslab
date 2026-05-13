@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://crystal-ui.com/v1/crystal-ui.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Stack+Sans+Headline:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stardalslab</title>
+  </head>
+  <body class="site-body">
+    <!-- <div id="app"></div> -->
+    <main class="site-main">
+      <div class="top-bar">
+        <img
+          src="./src/assets/stardalslab-logo.svg"
+          alt="StarDalsLab logo"
+          class="site-logo--header"
+        />
+        <nav class="cui-navigation-menu">
+          <a href="#" class="cui-nav-trigger cui-nav-trigger--link">Home</a>
+          <input type="checkbox" id="cui-nav-list" class="cui-nav-checkbox" />
+          <input type="checkbox" id="cui-nav-simple" class="cui-nav-checkbox" />
+          <div class="cui-nav-item-wrapper cui-nav-item-wrapper--list">
+            <label for="cui-nav-list" class="cui-nav-trigger">
+              Solutions
+              <svg
+                class="cui-nav-chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+            <div class="cui-nav-content cui-nav-content--list">
+              <a href="#" class="cui-nav-item">
+                <div class="cui-nav-item-title">Components</div>
+                <div class="cui-nav-item-description">
+                  Browse all components in the library.
+                </div>
+              </a>
+              <a href="#" class="cui-nav-item">
+                <div class="cui-nav-item-title">Documentation</div>
+                <div class="cui-nav-item-description">
+                  Learn how to use the library.
+                </div>
+              </a>
+              <a href="#" class="cui-nav-item">
+                <div class="cui-nav-item-title">Blog</div>
+                <div class="cui-nav-item-description">
+                  Read our latest blog posts.
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="cui-nav-item-wrapper cui-nav-item-wrapper--simple">
+            <label for="cui-nav-simple" class="cui-nav-trigger">
+              About Us
+              <svg
+                class="cui-nav-chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+            <div class="cui-nav-content cui-nav-content--simple">
+              <a href="#" class="cui-nav-link">About</a>
+              <a href="#" class="cui-nav-link">Contact</a>
+              <a href="#" class="cui-nav-link">Support</a>
+            </div>
+          </div>
+
+          <label
+            for="cui-nav-list"
+            class="cui-nav-overlay cui-nav-overlay--list"
+          ></label>
+          <label
+            for="cui-nav-simple"
+            class="cui-nav-overlay cui-nav-overlay--simple"
+          ></label>
+        </nav>
+      </div>
+      <section id="hero" class="hero-section">
+        <div class="hero-wave-title" role="img" aria-label="StarDalsLab">
+          <canvas id="canvas" class="hero-wave-canvas"></canvas>
+        </div>
+        <hr class="gradient-divider hero-divider" />
+        <div class="hero-copy-row">
+          <div class="hero-copy-col hero-copy-col--lead">
+            <p>
+              Meticulously crafted mobile and web solutions using
+              cost-effective, easiest to maintain and cutting-edge technologies.
+            </p>
+          </div>
+          <div class="hero-copy-col">
+            <p>
+              Farm-to-table style of service with photography, unique graphic
+              design, prototyping, front and backend development, infrastructure
+              setup, seo optimization and maintenance.
+            </p>
+          </div>
+          <div class="hero-copy-col hero-copy-col--right">
+            <p>Join us on this journey.</p>
+          </div>
+        </div>
+
+        <div class="hero-images">
+          <div class="night-vignette">
+            <img src="./public/img-night.png" alt="Night" />
+          </div>
+          <div>
+            <img src="./public/img-gfoss.png" alt="GFoss" />
+          </div>
+          <div>
+            <img src="./public/img-nl.png" alt="NL" />
+          </div>
+          <div>
+            <img
+              src="./public/img-lava.JPG"
+              alt="Lava"
+              class="hero-image-lava"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <hr class="footer-divider" />
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img
+            src="./src/assets/stardalslab-logo.svg"
+            alt="StarDalsLab logo"
+            class="site-logo--footer"
+          />
+          <p class="footer-copyright">
+            &copy; 2026 Nordic Gentleman ehf. All rights reserved.
+          </p>
+        </div>
+        <div id="social-links">
+          <a
+            href="https://www.instagram.com/lightintheskyiceland"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn.simpleicons.org/instagram/ffffff"
+              alt="Instagram"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mikael-kuranda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg"
+              alt="LinkedIn"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/Curanda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn.simpleicons.org/github/ffffff"
+              alt="GitHub"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/nordicgentlemantours"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn.simpleicons.org/facebook/ffffff"
+              alt="Facebook"
+              class="social-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
