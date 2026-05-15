@@ -2,33 +2,139 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://crystal-ui.com/v1/crystal-ui.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/stardalslab-logo.svg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Stack+Sans+Headline:wght@200..700&display=swap"
-      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Racing+Sans+One&display=swap"
+      rel="preload"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Racing+Sans+One&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <meta
+      name="description"
+      content="StarDalur crafts mobile and web solutions with thoughtful design, modern technology, and long-term maintainability."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://stardalur.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="StarDalur" />
+    <meta
+      property="og:title"
+      content="StarDalur | Mobile & Web Development Studio"
+    />
+    <meta
+      property="og:description"
+      content="StarDalur crafts mobile and web solutions with thoughtful design, modern technology, and long-term maintainability."
+    />
+    <meta property="og:url" content="https://stardalur.dev/" />
+    <meta
+      property="og:image"
+      content="https://stardalur.dev/img-hero-peeps-high.webp"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="286" />
+    <meta
+      property="og:image:alt"
+      content="StarDalur team illustration against a dark atmospheric background"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="StarDalur | Mobile & Web Development Studio"
+    />
+    <meta
+      name="twitter:description"
+      content="StarDalur crafts mobile and web solutions with thoughtful design, modern technology, and long-term maintainability."
+    />
+    <meta
+      name="twitter:image"
+      content="https://stardalur.dev/img-hero-peeps-high.webp"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="StarDalur team illustration against a dark atmospheric background"
+    />
+    <meta name="theme-color" content="#000000" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>stardalslab</title>
+    <title>StarDalur | Mobile & Web Development Studio</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "StarDalur",
+        "url": "https://stardalur.dev/",
+        "description": "StarDalur crafts mobile and web solutions with thoughtful design, modern technology, and long-term maintainability."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "StarDalur",
+        "url": "https://stardalur.dev/",
+        "email": "info@nordicgentleman.is",
+        "sameAs": [
+          "https://www.instagram.com/lightintheskyiceland",
+          "https://www.linkedin.com/in/mikael-kuranda",
+          "https://github.com/Curanda",
+          "https://www.facebook.com/nordicgentlemantours"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "info@nordicgentleman.is"
+        }
+      }
+    </script>
   </head>
   <body class="site-body">
+    <div class="stars-bg" aria-hidden="true">
+      <div class="twinkling-layer"></div>
+      <div id="stars-static"></div>
+      <div id="stars-static2"></div>
+      <div id="stars-static3"></div>
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <div id="stars4"></div>
+      <div id="stars5"></div>
+    </div>
     <!-- <div id="app"></div> -->
     <main class="site-main">
+      <h1 class="sr-only">StarDalur mobile and web development studio</h1>
       <div class="top-bar">
         <img
           src="./src/assets/stardalslab-logo.svg"
-          alt="StarDalsLab logo"
+          alt="StarDalur logo"
           class="site-logo--header"
         />
         <nav class="cui-navigation-menu">
-          <a href="#" class="cui-nav-trigger cui-nav-trigger--link">Home</a>
+          <a
+            href="#hero"
+            class="cui-nav-trigger cui-nav-trigger--link"
+            data-view-trigger="home"
+          >
+            Home
+          </a>
           <input type="checkbox" id="cui-nav-list" class="cui-nav-checkbox" />
           <input type="checkbox" id="cui-nav-simple" class="cui-nav-checkbox" />
           <div class="cui-nav-item-wrapper cui-nav-item-wrapper--list">
             <label for="cui-nav-list" class="cui-nav-trigger">
-              Solutions
+              Projects
               <svg
                 class="cui-nav-chevron"
                 width="16"
@@ -47,22 +153,34 @@
               </svg>
             </label>
             <div class="cui-nav-content cui-nav-content--list">
-              <a href="#" class="cui-nav-item">
-                <div class="cui-nav-item-title">Components</div>
+              <a href="https://romaniniceland.com/" class="cui-nav-item">
+                <div class="cui-nav-item-title">Roman in Iceland</div>
                 <div class="cui-nav-item-description">
-                  Browse all components in the library.
+                  Private tour operator.
                 </div>
               </a>
-              <a href="#" class="cui-nav-item">
-                <div class="cui-nav-item-title">Documentation</div>
+              <a href="https://tournotes.app" class="cui-nav-item">
+                <div class="cui-nav-item-title">Tour Notes</div>
                 <div class="cui-nav-item-description">
-                  Learn how to use the library.
+                  Cost & route planning tool for travel agencies.
                 </div>
               </a>
-              <a href="#" class="cui-nav-item">
-                <div class="cui-nav-item-title">Blog</div>
+              <a
+                href="https://heilsunudd-onnu.netlify.app/"
+                class="cui-nav-item"
+              >
+                <div class="cui-nav-item-title">Heilsunudd Onnu</div>
                 <div class="cui-nav-item-description">
-                  Read our latest blog posts.
+                  Massage therapist website.
+                </div>
+              </a>
+              <a
+                href="https://mascarro.nordicgentleman.is/"
+                class="cui-nav-item"
+              >
+                <div class="cui-nav-item-title">MacCompra-MasCarro</div>
+                <div class="cui-nav-item-description">
+                  Parody of McMaster-Carr online store.
                 </div>
               </a>
             </div>
@@ -70,7 +188,7 @@
 
           <div class="cui-nav-item-wrapper cui-nav-item-wrapper--simple">
             <label for="cui-nav-simple" class="cui-nav-trigger">
-              About Us
+              About
               <svg
                 class="cui-nav-chevron"
                 width="16"
@@ -89,9 +207,18 @@
               </svg>
             </label>
             <div class="cui-nav-content cui-nav-content--simple">
-              <a href="#" class="cui-nav-link">About</a>
-              <a href="#" class="cui-nav-link">Contact</a>
-              <a href="#" class="cui-nav-link">Support</a>
+              <a href="#about" class="cui-nav-link" data-view-trigger="about"
+                >About Us</a
+              >
+              <a
+                href="#contact"
+                class="cui-nav-link"
+                data-view-trigger="contact"
+                >Contact & Support</a
+              >
+              <!-- <a href="#" class="cui-nav-link" data-view-trigger="support"
+                >Support</a
+              > -->
             </div>
           </div>
 
@@ -105,108 +232,360 @@
           ></label>
         </nav>
       </div>
-      <section id="hero" class="hero-section">
-        <div class="hero-wave-title" role="img" aria-label="StarDalsLab">
-          <canvas id="canvas" class="hero-wave-canvas"></canvas>
+      <div class="hero-wave-title" role="img" aria-label="StarDalur">
+        <canvas id="canvas" class="hero-wave-canvas"></canvas>
+      </div>
+      <hr
+        class="gradient-divider hero-divider"
+        style="margin: auto; margin-bottom: 2rem"
+      />
+      <section
+        id="hero"
+        class="hero-section"
+        aria-label="Home section"
+        data-view="home"
+      >
+        <div class="hero-copy-row hero-copy-row--terminal">
+          <div class="card card--terminal">
+            <div class="status-container">
+              <div class="status">
+                <div class="mac-header">
+                  <span class="red"></span>
+                  <span class="yellow"></span>
+                  <span class="green"></span>
+                </div>
+                <div class="mac-content">
+                  <div class="terminal-line">
+                    <span>~</span>
+                    <span class="arrow">❯</span>
+                    <span>What</span>
+                  </div>
+                  <div class="terminal-line">
+                    <p class="terminal-text">
+                      Meticulously crafted mobile and web solutions using
+                      cost-effective, easiest to maintain and cutting-edge
+                      technologies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card--terminal">
+            <div class="status-container">
+              <div class="status">
+                <div class="mac-header">
+                  <span class="red"></span>
+                  <span class="yellow"></span>
+                  <span class="green"></span>
+                </div>
+                <div class="mac-content">
+                  <div class="terminal-line">
+                    <span>~</span>
+                    <span class="arrow">❯</span>
+                    <span>How</span>
+                  </div>
+                  <div class="terminal-line">
+                    <p>
+                      Farm-to-table style of service with photography, unique
+                      graphic design, prototyping, front and backend
+                      development, infrastructure setup, seo optimization and
+                      maintenance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card--terminal">
+            <div class="status-container">
+              <div class="status">
+                <div class="mac-header">
+                  <span class="red"></span>
+                  <span class="yellow"></span>
+                  <span class="green"></span>
+                </div>
+                <div class="mac-content">
+                  <div class="terminal-line">
+                    <span>~</span>
+                    <span class="arrow">❯</span>
+                    <span>Why</span>
+                  </div>
+                  <div class="terminal-line">
+                    <p>
+                      We're passionately creative, always curious and we have a
+                      great love for engineering.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <hr class="gradient-divider hero-divider" />
-        <div class="hero-copy-row">
-          <div class="hero-copy-col hero-copy-col--lead">
-            <p>
-              Meticulously crafted mobile and web solutions using
-              cost-effective, easiest to maintain and cutting-edge technologies.
-            </p>
-          </div>
-          <div class="hero-copy-col">
-            <p>
-              Farm-to-table style of service with photography, unique graphic
-              design, prototyping, front and backend development, infrastructure
-              setup, seo optimization and maintenance.
-            </p>
-          </div>
-          <div class="hero-copy-col hero-copy-col--right">
-            <p>Join us on this journey.</p>
-          </div>
-        </div>
+      </section>
 
-        <div class="hero-images">
-          <div class="night-vignette">
-            <img src="./public/img-night.png" alt="Night" />
+      <section
+        id="about"
+        class="about-sections"
+        aria-label="About section"
+        data-view="about"
+        hidden
+      >
+        <div class="about-subsection">
+          <div class="status-container">
+            <div class="status">
+              <div class="mac-header">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+              <div class="mac-content">
+                <div class="terminal-line">
+                  <span>~</span>
+                  <span class="arrow">❯</span>
+                  <span>About</span>
+                </div>
+                <div class="terminal-line">
+                  <p style="color: white; font-display: block; padding: 0.5rem">
+                    StarDalur is a small software house based in Kopavogur,
+                    Iceland. We deal in cross-platform mobile and web app
+                    development. Our expertise includes ticketing systems,
+                    custom admin panels, harnessing geolocation services and
+                    providing custom mapping solutions. We have a particular
+                    understanding of the tourism and wellness sectors. We have a
+                    passion for producing unique, eye-catching layouts and lean
+                    user interfaces. We can provide everything from photography
+                    and design to deployment & infrastructure management.
+                  </p>
+                </div>
+                <div class="terminal-line">
+                  <span>~</span>
+                  <span class="arrow">❯</span>
+                  <span>Corporate info</span>
+                </div>
+                <div class="terminal-line">
+                  <ul
+                    style="color: white; font-display: block; list-style: none"
+                  >
+                    <li>Nordic Gentleman ehf.</li>
+                    <li>kennitala: 670619-0870</li>
+                    <li>VAT: 135127</li>
+                    <li>email: info@nordicgentleman.is</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="./public/img-gfoss.png" alt="GFoss" />
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="about-sections"
+        aria-label="Contact section"
+        data-view="contact"
+        hidden
+      >
+        <div class="about-subsection">
+          <div class="status-container">
+            <div class="status">
+              <div class="mac-header">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+              <div class="mac-content">
+                <div class="terminal-line">
+                  <span>~</span>
+                  <span class="arrow">❯</span>
+                  <span>Phone</span>
+                </div>
+                <div class="terminal-line">
+                  <ul
+                    style="color: white; font-display: block; list-style: none"
+                  >
+                    <li>(+354) 888 1070</li>
+                  </ul>
+                </div>
+                <div class="terminal-line">
+                  <span>~</span>
+                  <span class="arrow">❯</span>
+                  <span>Email</span>
+                </div>
+                <div class="terminal-line">
+                  <ul
+                    style="color: white; font-display: block; list-style: none"
+                  >
+                    <li>info@nordicgentleman.is</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="./public/img-nl.png" alt="NL" />
-          </div>
-          <div>
-            <img
-              src="./public/img-lava.JPG"
-              alt="Lava"
-              class="hero-image-lava"
-            />
+        </div>
+      </section>
+
+      <section
+        id="support"
+        class="about-sections"
+        aria-label="Support section"
+        data-view="support"
+        hidden
+      >
+        <div class="about-subsection">
+          <div class="status-container">
+            <div class="status">
+              <div class="mac-header">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+              <div class="mac-content">
+                <div class="terminal-line">
+                  <span>~</span>
+                  <span class="arrow">❯</span>
+                  <span>Phone</span>
+                </div>
+                <div class="terminal-line">
+                  <ul
+                    style="color: white; font-display: block; list-style: none"
+                  >
+                    <li>(+354) 888 1070</li>
+                  </ul>
+                </div>
+                <div class="terminal-line">
+                  <span>~</span>
+                  <span class="arrow">❯</span>
+                  <span>Email</span>
+                </div>
+                <div class="terminal-line">
+                  <ul
+                    style="color: white; font-display: block; list-style: none"
+                  >
+                    <li>info@nordicgentleman.is</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <hr class="footer-divider" />
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <img
-            src="./src/assets/stardalslab-logo.svg"
-            alt="StarDalsLab logo"
-            class="site-logo--footer"
+      <div class="footer-hero-image-wrap">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              https://raw.githubusercontent.com/Curanda/Curanda.github.io/main/stardalur/img-hero-peeps-low.webp
+            "
+            type="image/webp"
           />
-          <p class="footer-copyright">
-            &copy; 2026 Nordic Gentleman ehf. All rights reserved.
-          </p>
-        </div>
-        <div id="social-links">
-          <a
-            href="https://www.instagram.com/lightintheskyiceland"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              https://raw.githubusercontent.com/Curanda/Curanda.github.io/main/stardalur/img-hero-peeps-high.webp
+            "
+            type="image/webp"
+          />
+          <img
+            src="https://raw.githubusercontent.com/Curanda/Curanda.github.io/main/stardalur/img-hero-peeps-high.webp"
+            alt="StarDalur team illustration"
+            class="footer-hero-image"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
+        </picture>
+      </div>
+
+      <div class="footer-content-bg">
+        <hr class="footer-divider" />
+        <div class="footer-inner">
+          <div class="footer-brand">
             <img
-              src="https://cdn.simpleicons.org/instagram/ffffff"
-              alt="Instagram"
-              class="social-icon"
+              src="./src/assets/stardalslab-logo.svg"
+              alt="StarDalur logo"
+              class="site-logo--footer"
             />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/mikael-kuranda"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg"
-              alt="LinkedIn"
-              class="social-icon"
-            />
-          </a>
-          <a
-            href="https://github.com/Curanda"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://cdn.simpleicons.org/github/ffffff"
-              alt="GitHub"
-              class="social-icon"
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/nordicgentlemantours"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://cdn.simpleicons.org/facebook/ffffff"
-              alt="Facebook"
-              class="social-icon"
-            />
-          </a>
+            <p class="footer-copyright">
+              &copy; 2026 Nordic Gentleman ehf. All rights reserved.
+            </p>
+          </div>
+          <div id="social-links">
+            <a
+              href="https://www.instagram.com/lightintheskyiceland"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <svg
+                class="social-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm8.5 1.8h-8.5A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Zm5.15-2.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mikael-kuranda"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                class="social-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M4.98 3.5A2.49 2.49 0 1 1 5 8.48a2.49 2.49 0 0 1-.02-4.98ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.55c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95V21h-4V9Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/Curanda"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg
+                class="social-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.36 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.52 1.05 1.52 1.05.88 1.56 2.32 1.1 2.88.84.09-.66.35-1.1.63-1.35-2.22-.26-4.56-1.15-4.56-5.13 0-1.13.39-2.06 1.03-2.78-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.06A9.28 9.28 0 0 1 12 7.5c.85 0 1.71.12 2.52.35 1.91-1.34 2.74-1.06 2.74-1.06.56 1.42.21 2.47.11 2.73.64.72 1.03 1.65 1.03 2.78 0 3.99-2.35 4.86-4.58 5.12.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/nordicgentlemantours"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <svg
+                class="social-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.87.25-1.46 1.55-1.46h1.65V3.98c-.29-.04-1.26-.12-2.39-.12-2.37 0-3.99 1.48-3.99 4.19V10H8v3h2.22v8h3.28Z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

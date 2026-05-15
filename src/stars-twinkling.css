@@ -1,0 +1,44 @@
+@keyframes twinkle-drift {
+  from {
+    background-position:
+      0 0,
+      0 0,
+      0 0;
+  }
+
+  to {
+    background-position:
+      420px -280px,
+      -360px 220px,
+      260px -180px;
+  }
+}
+
+@keyframes twinkle-fade {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.82;
+  }
+}
+
+.stars-bg .twinkling-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle, rgb(255 255 255 / 0.56) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgb(255 255 255 / 0.4) 0 1.2px, transparent 2px),
+    radial-gradient(circle, rgb(255 255 255 / 0.3) 0 0.9px, transparent 1.6px);
+  background-size:
+    160px 160px,
+    220px 220px,
+    290px 290px;
+  background-repeat: repeat;
+  animation:
+    twinkle-drift 180s linear infinite,
+    twinkle-fade 7s ease-in-out infinite;
+}

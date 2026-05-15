@@ -28,7 +28,7 @@ const rnd = (min: number, max: number): number =>
 
 const uTime: UniformValue<number> = { value: 0 };
 const uTimeCoef: UniformValue<number> = { value: conf.timeCoef };
-const TITLE_TEXT = "StarDalsLab";
+const TITLE_TEXT = "StarDalur";
 const TITLE_FONT_FAMILY = '"Racing Sans One", sans-serif';
 const TITLE_HORIZONTAL_PADDING = 0.04;
 const TITLE_VERTICAL_CENTER = 0.47;

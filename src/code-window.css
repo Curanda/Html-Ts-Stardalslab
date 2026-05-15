@@ -1,0 +1,107 @@
+.status-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  background-color: #222533;
+  color: #fbebe2;
+  padding: 0.55rem;
+  width: 100%;
+  min-height: 9rem;
+  height: 100%;
+  border-radius: 10px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  transition: all 0.3s ease-in-out;
+  border: transparent 1px solid;
+}
+
+.mac-content {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  cursor: text;
+  gap: 8px;
+}
+
+.status span {
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.card.card--terminal .status p,
+.card.card--terminal .terminal-text {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.terminal-text {
+  margin: 0;
+}
+
+.status span:first-child {
+  color: #57c7ff;
+}
+.status .arrow {
+  color: #ff6ac1;
+}
+.cursor {
+  height: 80%;
+  width: 0.5px;
+  background-color: rgb(180, 173, 173);
+  opacity: 0;
+  /* animation: animate 5s ease infinite;
+  transition: 1s animate; */
+}
+
+.mac-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.mac-header span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.mac-header .red {
+  background-color: #47c2d8;
+}
+
+.mac-header .yellow {
+  background-color: #104994;
+}
+
+.mac-header .green {
+  background-color: #28c941;
+}
+
+@media (max-width: 768px) {
+  .status-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+
+@keyframes animate {
+  100% {
+    opacity: 100%;
+  }
+}

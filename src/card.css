@@ -1,0 +1,114 @@
+/* From Uiverse.io by Pravins01 */
+.card {
+  --card-hover-sx: 1;
+  --card-hover-sy: 1;
+  --card-after-scale: 1.06;
+  position: relative;
+  width: 25%;
+  min-height: 10rem;
+  max-height: fit-content;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: white;
+  margin-top: 2rem;
+}
+
+.card--terminal {
+  padding: 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #03707a 0%, #20516d 100%);
+  z-index: -2;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -3;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(-45deg, #03707a 0%, #28a286 100%);
+  opacity: 0.7;
+  transform: scale(var(--card-after-scale));
+  transform-origin: center;
+  filter: blur(0.3rem);
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+}
+
+.card--terminal h4,
+.card--terminal p {
+  opacity: 1;
+  max-height: none;
+  overflow: visible;
+  transform: none;
+}
+
+.card h4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(4px);
+  transition:
+    opacity 0.2s ease,
+    max-height 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover h4 {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-4px);
+}
+
+.card:hover p {
+  opacity: 1;
+  max-height: 12rem;
+  transform: translateY(0);
+}
+
+.card p:last-child {
+  color: white;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  transform: scale(1.08);
+  filter: blur(0.3rem);
+}
+
+.card:hover::before {
+  transform: rotate(180deg);
+}
