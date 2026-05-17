@@ -16,6 +16,8 @@
   cursor: pointer;
   color: white;
   margin-top: 2rem;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card--terminal {
@@ -111,4 +113,31 @@
 
 .card:hover::before {
   transform: rotate(180deg);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .card {
+    cursor: default;
+  }
+
+  .card h4 {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-4px);
+  }
+
+  .card p {
+    opacity: 1;
+    max-height: 12rem;
+    transform: translateY(0);
+  }
+
+  .card--terminal h4,
+  .card--terminal p {
+    opacity: 1;
+    max-height: none;
+    overflow: visible;
+    transform: none;
+  }
 }
