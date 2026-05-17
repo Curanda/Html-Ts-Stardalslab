@@ -122,7 +122,7 @@
           alt="StarDalur logo"
           class="site-logo--header"
         />
-        <nav class="cui-navigation-menu">
+        <nav class="cui-navigation-menu cui-navigation-menu--desktop">
           <a
             href="#hero"
             class="cui-nav-trigger cui-nav-trigger--link"
@@ -231,14 +231,84 @@
             class="cui-nav-overlay cui-nav-overlay--simple"
           ></label>
         </nav>
+
+        <input
+          type="checkbox"
+          id="cui-nav-mobile"
+          class="cui-nav-mobile-toggle"
+        />
+        <label
+          for="cui-nav-mobile"
+          class="cui-nav-mobile-button"
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav
+          id="cui-mobile-panel"
+          class="cui-navigation-mobile"
+          aria-label="Mobile navigation"
+        >
+          <a
+            href="#hero"
+            class="cui-nav-link cui-nav-link--mobile"
+            data-view-trigger="home"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="cui-nav-link cui-nav-link--mobile"
+            data-view-trigger="about"
+            >About Us</a
+          >
+          <a
+            href="#contact"
+            class="cui-nav-link cui-nav-link--mobile"
+            data-view-trigger="contact"
+            >Contact & Support</a
+          >
+          <div class="cui-mobile-projects">
+            <p class="cui-mobile-projects-title">Projects</p>
+            <div class="cui-mobile-projects-list">
+              <a
+                href="https://romaniniceland.com/"
+                class="cui-nav-link cui-nav-link--mobile cui-nav-link--mobile-project"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Roman in Iceland</a
+              >
+              <a
+                href="https://tournotes.app"
+                class="cui-nav-link cui-nav-link--mobile cui-nav-link--mobile-project"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tour Notes</a
+              >
+              <a
+                href="https://heilsunudd-onnu.netlify.app/"
+                class="cui-nav-link cui-nav-link--mobile cui-nav-link--mobile-project"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Heilsunudd Onnu</a
+              >
+              <a
+                href="https://mascarro.nordicgentleman.is/"
+                class="cui-nav-link cui-nav-link--mobile cui-nav-link--mobile-project"
+                target="_blank"
+                rel="noopener noreferrer"
+                >MacCompra-MasCarro</a
+              >
+            </div>
+          </div>
+        </nav>
+        <label for="cui-nav-mobile" class="cui-nav-mobile-overlay"></label>
       </div>
       <div class="hero-wave-title" role="img" aria-label="StarDalur">
         <canvas id="canvas" class="hero-wave-canvas"></canvas>
       </div>
-      <hr
-        class="gradient-divider hero-divider"
-        style="margin: auto; margin-bottom: 2rem"
-      />
+      <hr class="gradient-divider hero-divider" style="margin: auto" />
       <section
         id="hero"
         class="hero-section"

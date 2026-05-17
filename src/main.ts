@@ -40,12 +40,18 @@ const initViewSwitching = () => {
       const simpleToggle = document.getElementById(
         "cui-nav-simple",
       ) as HTMLInputElement | null;
+      const mobileToggle = document.getElementById(
+        "cui-nav-mobile",
+      ) as HTMLInputElement | null;
 
       if (listToggle) {
         listToggle.checked = false;
       }
       if (simpleToggle) {
         simpleToggle.checked = false;
+      }
+      if (mobileToggle) {
+        mobileToggle.checked = false;
       }
     });
   });

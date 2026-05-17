@@ -98,10 +98,18 @@ body {
   margin: 1rem 3rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: transparent;
+}
+
+.cui-nav-mobile-toggle,
+.cui-nav-mobile-button,
+.cui-navigation-mobile,
+.cui-nav-mobile-overlay {
+  display: none;
 }
 
 .site-logo--header {
@@ -127,7 +135,7 @@ body {
   align-items: flex-start;
   width: 90%;
   min-height: fit-content;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: 3rem;
   font-size: 1rem;
 }
@@ -1122,6 +1130,127 @@ main .cui-nav-item-icon {
 main .cui-nav-trigger:hover,
 main .cui-nav-item-wrapper:hover .cui-nav-trigger {
   color: #000;
+}
+
+@media (max-width: 900px) {
+  .top-bar {
+    margin: 0.8rem 1rem;
+  }
+
+  .site-logo--header {
+    height: 3.2rem;
+  }
+
+  .cui-navigation-menu--desktop {
+    display: none;
+  }
+
+  .cui-nav-mobile-toggle {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .cui-nav-mobile-button {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 0.6rem;
+    border: 1px solid rgb(255 255 255 / 28%);
+    background: rgb(0 0 0 / 45%);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.28rem;
+    cursor: pointer;
+    z-index: 130;
+  }
+
+  .cui-nav-mobile-button span {
+    width: 1.2rem;
+    height: 2px;
+    border-radius: 99px;
+    background: #fff;
+    transition: transform 0.2s ease;
+  }
+
+  .cui-navigation-mobile {
+    display: block;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    width: min(18rem, calc(100vw - 2rem));
+    background: #000;
+    border: 1px solid hsl(0 0% 22%);
+    border-radius: 0.8rem;
+    padding: 0.35rem;
+    box-shadow:
+      0 14px 30px -12px rgb(0 0 0 / 65%),
+      0 10px 16px -12px rgb(0 0 0 / 45%);
+    z-index: 125;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  .cui-nav-link--mobile {
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .cui-mobile-projects {
+    margin-top: 0.35rem;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    background: rgb(255 255 255 / 6%);
+    border: 1px solid rgb(255 255 255 / 12%);
+  }
+
+  .cui-mobile-projects-title {
+    margin: 0 0 0.4rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 72%);
+    font-weight: 600;
+  }
+
+  .cui-mobile-projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .cui-nav-link--mobile-project {
+    padding: 0.55rem 0.6rem;
+    border-radius: 0.45rem;
+  }
+
+  .cui-nav-mobile-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 20%);
+    z-index: 120;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #cui-nav-mobile:checked ~ .cui-navigation-mobile {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  #cui-nav-mobile:checked ~ .cui-nav-mobile-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .stack-sans-headline-regular {
